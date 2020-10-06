@@ -32,7 +32,7 @@ export default {
   } ,
   methods:{
     signin(){
-    const api='https://vue-course-api.hexschool.io/signin';
+    const api='https://vue-course-api.hexschool.io/admin/signin';
     const vm = this;
     this.$http.post(api,vm.user).then((response) => {
     console.log(response.data);
