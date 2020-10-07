@@ -4,6 +4,7 @@ import Home from '@/components/HelloWorld';
 import login from '@/components/pages/login';
 import dashboard from '@/components/dashboard';
 import products from '@/components/pages/products';
+import customer from '@/components/pages/customer';
 
 Vue.use(VueRouter)
 export default new VueRouter({
@@ -35,7 +36,21 @@ export default new VueRouter({
                     component:products,
                 }
             ]
+        },
+        {
+            name:'dashboard',
+            path:'/',
+            component:dashboard,
+            //meta:{requiresAuth:true}
+            children:[
+                {
+                    name:'customer',
+                    path:'/customer',
+                    component:customer,
+                }
+            ]
         }
+
 
 
     ]
